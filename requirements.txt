@@ -1,0 +1,6 @@
+bs4
+fastapi
+uvicorn
+pdfplumber
+requests
+uvicorn
