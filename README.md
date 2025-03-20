@@ -76,10 +76,7 @@ If you have a UI folder and need to integrate it with the backend, follow these 
    - Simply open the `main_ui.html` file in any browser.
    - Ensure the backend (`ollama serve`) is running to support AI-based functionality.
 
-3. **Configure API endpoints if needed**
-   - If the frontend needs to communicate with the backend, update any JavaScript files to point to the backend API (e.g., `http://localhost:5000`).
-
-4. **Update the address in `script.js` to the IP address of the system where the backend is running.**
+3. **Update the address in `script.js` to the IP address of the system where the backend is running.**
    
    To find the IP address of the system, run the following command in the terminal:
    ```sh
