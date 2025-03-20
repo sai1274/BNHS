@@ -1,0 +1,254 @@
+/* Background with BNHS logo */
+.background-logo {
+    background-image: url('bnhs_logo.png'), rgba(0, 0, 0, 0.4); /* Replace with actual logo image path */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+body {
+    background: url('bnhs_logo.png') no-repeat center center fixed, rgba(0, 0, 0, 0.8);
+    background-size: cover; /* Ensures the logo covers the full page */
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* Styling for main container */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+/* Body background and layout styles */
+body {
+    background-color: rgba(0, 0, 0, 0.1); /* Semi-transparent background for the page */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Welcome Title styles - distinct title design */
+
+
+/* Welcome Title */
+.welcome-title {
+    font-size: 60px;
+    font-weight: 800;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: -5px;
+    animation: fadeIn 1.5s ease-out;
+    position: relative;
+}
+
+/* Animation for the title */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Top Bar with Login Button */
+.top-bar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* .login-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #45a049;
+} */
+
+/* Chat container styles - center the box */
+.chat-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);  /* Adjusted to take up the remaining space */
+}
+
+/* Chat box styles - separated styling for the chat box */
+.chat-box {
+    width: 900px; /* Slightly wider box */
+    height: 450px; /* Adjusted height */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for the chat box */
+    border-radius: 15px; /* More rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Larger shadow for better depth */
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow: hidden;  /* Hides the scrollbar */
+    animation: slideIn 1s ease-out; /* Animation for the chat box */
+}
+
+/* Animation for the chat box */
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* Chat body styles - smaller margins and padding */
+.chat-body {
+    flex-grow: 1;
+    overflow-y: auto;  /* Enable scrolling */
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    scrollbar-width: none;  /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none;  /* Hide scrollbar in Internet Explorer */
+}
+
+/* Message styles - User and Bot messages */
+.user-message {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 12px;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    align-self: flex-end; /* Align user message to the right */
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.bot-message {
+    background-color: #f1f1f1;
+    color: black;
+    border-radius: 12px;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    align-self: flex-start; /* Align bot message to the left */
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+/* Input field styles - aligned to the left */
+
+.chat-input-container {
+    display: flex;
+    justify-content: flex-start;  /* Align input field to the left */
+    margin-top: auto;  /* Push the input field to the bottom */
+}
+
+.chat-input {
+    width: 100%;  /* Full width of the chat box */
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+}
+
+.chat-input:focus {
+    border-color: #4CAF50;
+}
+
+
+
+
+
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 500px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+textarea, input[type="email"], input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="file"] {
+    padding: 5px;
+}
+
+button.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button.submit-btn:hover {
+    background-color: darkgreen;
+}
+
+.required {
+    color: red;
+}
