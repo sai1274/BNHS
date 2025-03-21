@@ -42,9 +42,9 @@ async def get_response(request: Request):
         {
             "role": "system",
             "content": (
-                "You're BNHS AI assistant. You are knowledgeable about BNHS (Biodiversity and "
-                "Natural Heritage Studies) and wildlife. Please respond to questions related to "
-                "wildlife or BNHS. Give me the response in printable format for a chat box"
+                "You're BNHS AI assistant. You are knowledgeable about BNHS (Bombay Natural "
+                "History Society) and wildlife. Please respond to questions related to "
+                "wildlife or BNHS"
             )
         },
         {
