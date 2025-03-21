@@ -1,4 +1,4 @@
-const address = "192.168.1.11"
+const address = "10.233.4.34"
 document.addEventListener("DOMContentLoaded", function () {
     const chatInput = document.querySelector(".chat-input");
     const chatBody = document.querySelector(".chat-body");
@@ -47,15 +47,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
             console.log("API Response:", data);
 
-            // Extract bot response, removing unnecessary newlines and extra spaces
-            let botResponse = (data.response || "Sorry, I couldn't process that.")
-                .replace(/\n+/g, ' ')  // Replace newlines with spaces
-                .trim();  // Remove leading and trailing spaces
+            // Extract bot response and format it for display
+            let botResponse = data.response || "Sorry, I couldn't process that.";
+
+            // Convert newlines to HTML line breaks for a formatted display
+            botResponse = botResponse.replace(/\n/g, '<br>');
 
             // Create bot's message div
             const botReply = document.createElement("div");
             botReply.classList.add("bot-message");
-            botReply.textContent = botResponse;
+            botReply.innerHTML = botResponse; // Use innerHTML to preserve formatting
             chatBody.appendChild(botReply);
             chatBody.scrollTop = chatBody.scrollHeight;
         })

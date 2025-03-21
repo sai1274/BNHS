@@ -44,32 +44,24 @@ async def get_response(request: Request):
             "content": (
                 "You're BNHS AI assistant. You are knowledgeable about BNHS (Biodiversity and "
                 "Natural Heritage Studies) and wildlife. Please respond to questions related to "
-                "wildlife or BNHS"
+                "wildlife or BNHS. Give me the response in printable format for a chat box"
             )
         },
         {
             "role": "user",
             "content": data['prompt']  # User's query
-        }
-    ]
+        },
+    ],
+    "stream": False
 } 
         print("Sending Payload:", payload)
 
         # Sending request to external service
         response = requests.post("http://localhost:11434/api/chat", json=payload)
 
-        result = ""
-        for line in response.text.strip().split('\n'):
-            try:
-                line = json.loads(line)
-                if 'message' in line and 'content' in line['message']:
-                    result += line['message']['content']
-            except json.JSONDecodeError:
-                raise Exception("Error decoding JSON in response")
+        result = response.json()['message']['content']
 
         if response.status_code == 200:
-            # result = response.json()
-            print(result)
             return {"response": result}
         else:
             return {"error": f"Failed to get response. Status code: {response.status_code}"}
