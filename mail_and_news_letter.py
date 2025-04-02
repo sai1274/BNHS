@@ -16,8 +16,8 @@ HEADERS = {
 TRACK_FILE = "downloaded_newsletters.txt"
 SUMMARY_API_URL = "http://localhost:11434/api/chat"
 
-SENDER_EMAIL = "sustainathon06@gmail.com"
-SENDER_PASSWORD = "klsnwqtxvhsqdjkp"
+SENDER_EMAIL = "xxxx@gmail.com"
+SENDER_PASSWORD = "xxxxx"
 RECIPIENT_EMAIL = ["ashwinihegde234@gmail.com", "neigant1274@gmail.com", "chethansaikumar9604@gmail.com"]
 
 
